@@ -70,3 +70,25 @@ function saveProfileChanges() {
 
 // Event Listener for Save Profile Button
 getElement('save-profile-btn').addEventListener('click', saveProfileChanges);
+// Function to save changes to the backend when the user updates their profile
+function saveProfileChanges() {
+  const newName = getElement('edit-name').value;
+  const newAge = getElement('edit-age').value;
+  const newGender = getElement('edit-gender').value;
+
+  // Make an AJAX request to save changes
+  $.ajax({
+    type: 'POST',
+    url: '/saveProfileChanges',
+    data: { newName, newAge, newGender },
+    success: function (response) {
+      console.log('Profile changes saved successfully');
+    },
+    error: function (error) {
+      console.error('Error saving profile changes', error);
+    }
+  });
+}
+
+// Event Listener for Save Profile Button
+getElement('save-profile-btn').addEventListener('click', saveProfileChanges);

@@ -1,181 +1,114 @@
 /* Reset some default styles */
-body,
-h1,
-h2,
-p,
-button,
-input,
-textarea {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body, h1, h2, p, ul, li, button, input, select {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    transition: background-color 0.3s ease;
-    /* Smooth transition for background color change */
-}
-
-body.dark-mode {
-    background-color: #333;
-    color: #fff;
+  font-family: 'Helvetica', sans-serif;
+  background-color: #1f1f3d; /* Dark purple background */
+  color: #fff; /* White text color */
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
+  background-color: #2c2c54; /* Darker purple header background */
+  color: #fff; /* White text color */
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
+.profile-container {
+  display: flex;
+  align-items: center;
 }
 
-h2 {
-    color: #4CAF50;
+.profile-info {
+  margin-left: 15px;
 }
 
-/* Full-page Navigation Overlay */
+#profile-image {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.info-container {
+  text-align: center;
+}
+
+.info-container p {
+  margin: 5px 0;
+}
+
+.menu-container {
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 24px;
+}
+
+/* Full-page navigation overlay styles */
 .full-page-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    transition: opacity 0.5s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-.full-page-nav.hidden {
-    opacity: 0;
-    pointer-events: none;
+.profile-image-overlay {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
-.full-page-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+.exit-btn {
+  background-color: #ff3b30; /* iOS red */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
-.full-page-nav ul li {
-    margin-bottom: 20px;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.full-page-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
+ul li {
+  margin-bottom: 15px;
 }
 
-.full-page-nav ul li a:hover {
-    color: #4CAF50;
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-.full-page-nav .exit-btn {
-    background-color: #fff;
-    color: #4CAF50;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.full-page-nav .exit-btn i {
-    margin-right: 5px;
-}
-
+/* Styling for motivational copy */
 .motivational-copy {
-    margin-top: 20px;
-    text-align: center;
-    color: #fff;
+  margin-top: 20px;
+  text-align: center;
 }
 
-/* Settings Page */
-.edit-profile,
-.pill-parameters,
-.dark-mode-toggle {
-    margin-top: 20px;
+#typing-text {
+  font-weight: bold;
+  color: #007aff; /* iOS blue */
 }
 
-input[type="file"],
-input[type="text"],
-input[type="number"],
-select,
-button {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Medication History Page */
-.medication-history,
-.last-medication,
-.next-medication {
-    margin-top: 20px;
-}
-
-/* Additional Styling - Feel free to modify */
-.welcome-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.welcome h2 {
-    font-size: 2em;
-    margin-bottom: 1em;
-}
-
-.welcome p {
-    font-size: 1.1em;
-    margin-bottom: 1.5em;
-}
-
-.cta-button {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 15px 30px;
-    margin-right: 1em;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.welcome-image {
-    width: 100%;
-    height: auto;
-    margin-top: 1em;
-    border-radius: 15px;
-}
-
-#healthData {
-    background-color: #f0f0f0;
-    border-radius: 15px;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-#healthData h3 {
-    color: #4CAF50;
-    margin-bottom: 10px;
-}
-
-#healthData p {
-    font-size: 1.1em;
-    margin-bottom: 5px;
-}
+/* Additional styles can be added or modified based on your preferences */
