@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Smart Pill Dispenser</title>
 </head>
 
@@ -25,14 +27,15 @@
         <!-- Time and Next Pill Information -->
         <div class="info-container">
             <!-- Placeholder for time and next pill information -->
-            <p id="current-time">Current Time: 12:00:00 PM</p>
-            <p id="next-pill">Next Medication: 2:00 PM</p>
+            <p id="current-time">Current Time: 12:00:00 PM <i class="fas fa-clock"></i></p>
+            <!-- Icon added for next pill information -->
+            <p id="next-pill">Next Medication: 2:00 PM <i class="fas fa-pills"></i></p>
         </div>
 
         <!-- Hamburger Menu -->
         <div class="menu-container">
             <!-- Placeholder for hamburger menu -->
-            <div class="menu-icon" onclick="openFullPageNav()"></div>
+            <div class="menu-icon" onclick="openFullPageNav()"><i class="fas fa-bars"></i></div>
         </div>
     </header>
 
@@ -43,7 +46,7 @@
             <h1>Hello, Patient Name!</h1>
             <p>We're here to help you stay on track with your medication schedule. Use the Smart Pill Dispenser to manage your health effortlessly.</p>
             <p>Explore the features and take control of your well-being.</p>
-            <p id="current-date">Current Date: <!-- Dynamically Updated --></p>
+            <p id="current-date">Current Date: <!-- Dynamically Updated --><i class="fas fa-calendar-day"></i></p>
         </div>
 
         <!-- Settings Page -->
@@ -114,11 +117,11 @@
                 <img src="images/profile.jpg" alt="Patient Profile">
             </div>
             <!-- Navigation Menu -->
-            <button class="exit-btn" onclick="closeFullPageNav()">Exit</button>
+            <button class="exit-btn" onclick="closeFullPageNav()"><i class="fas fa-times"></i> Exit</button>
             <ul>
-                <li><a href="#" onclick="navigateTo('homepage')">Home</a></li>
-                <li><a href="#" onclick="navigateTo('settings')">Settings</a></li>
-                <li><a href="#" onclick="navigateTo('history')">History</a></li>
+                <li><a href="#" onclick="navigateTo('homepage')"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#" onclick="navigateTo('settings')"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="#" onclick="navigateTo('history')"><i class="fas fa-history"></i> History</a></li>
             </ul>
             <!-- Motivational Copy with Typing Text Effect -->
             <div class="motivational-copy">
