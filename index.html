@@ -32,7 +32,7 @@
         <!-- Hamburger Menu -->
         <div class="menu-container">
             <!-- Placeholder for hamburger menu -->
-            <div class="menu-icon" data-target="homepage"></div>
+            <div class="menu-icon" onclick="openFullPageNav()"></div>
         </div>
     </header>
 
@@ -104,6 +104,25 @@
                 <h2>Next Medication</h2>
                 <p id="next-medication-name">Medication Name: Ibuprofen</p>
                 <p id="next-medication-time">Scheduled for: 2:00 PM</p>
+            </div>
+        </div>
+
+        <!-- Full-page Navigation Overlay -->
+        <div class="full-page-nav hidden">
+            <!-- Profile Image -->
+            <div class="profile-image-overlay">
+                <img src="images/profile.jpg" alt="Patient Profile">
+            </div>
+            <!-- Navigation Menu -->
+            <button class="exit-btn" onclick="closeFullPageNav()">Exit</button>
+            <ul>
+                <li><a href="#" onclick="navigateTo('homepage')">Home</a></li>
+                <li><a href="#" onclick="navigateTo('settings')">Settings</a></li>
+                <li><a href="#" onclick="navigateTo('history')">History</a></li>
+            </ul>
+            <!-- Motivational Copy with Typing Text Effect -->
+            <div class="motivational-copy">
+                <p>Keep smiling, and stay healthy! <span id="typing-text"></span></p>
             </div>
         </div>
     </main>
