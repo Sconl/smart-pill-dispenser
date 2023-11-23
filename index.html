@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Smart Pill Dispenser</title>
+</head>
+
+<body>
+    <header>
+        <!-- Patient Profile -->
+        <div class="profile-container">
+            <!-- Placeholder for patient profile -->
+            <div class="profile-info">
+                <img src="images/profile.jpg" alt="Patient Profile" id="profile-image">
+                <!-- Edit Profile moved to the Settings Page -->
+                <h2 id="patient-name">Welcome Back, Patient Name!</h2>
+                <p id="patient-age">Age: 30</p>
+                <p id="patient-gender">Gender: Female</p>
+            </div>
+        </div>
+
+        <!-- Time and Next Pill Information -->
+        <div class="info-container">
+            <!-- Placeholder for time and next pill information -->
+            <p id="current-time">Current Time: 12:00:00 PM</p>
+            <p id="next-pill">Next Medication: 2:00 PM</p>
+        </div>
+
+        <!-- Hamburger Menu -->
+        <div class="menu-container">
+            <!-- Placeholder for hamburger menu -->
+            <div class="menu-icon" data-target="homepage"></div>
+        </div>
+    </header>
+
+    <!-- Content Area -->
+    <main>
+        <!-- Placeholder for homepage content -->
+        <div id="homepage-content" class="content-placeholder">
+            <h1>Hello, Patient Name!</h1>
+            <p>We're here to help you stay on track with your medication schedule. Use the Smart Pill Dispenser to manage your health effortlessly.</p>
+            <p>Explore the features and take control of your well-being.</p>
+            <p id="current-date">Current Date: <!-- Dynamically Updated --></p>
+        </div>
+
+        <!-- Settings Page -->
+        <div id="settings-page" class="hidden content-placeholder">
+            <h1>Settings</h1>
+            <!-- Edit Profile Section -->
+            <div class="edit-profile">
+                <h2>Edit Profile</h2>
+                <label for="edit-image">Profile Image:</label>
+                <input type="file" id="edit-image" accept="image/*">
+                <!-- Other Personal Information -->
+                <label for="edit-name">Name:</label>
+                <input type="text" id="edit-name">
+                <label for="edit-age">Age:</label>
+                <input type="number" id="edit-age">
+                <label for="edit-gender">Gender:</label>
+                <select id="edit-gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <button id="save-profile-btn">Save Changes</button>
+            </div>
+            <!-- Pill Dispensing Parameters Section -->
+            <div class="pill-parameters">
+                <h2>Pill Dispensing Parameters</h2>
+                <label for="medication-name">Medication Name:</label>
+                <input type="text" id="medication-name">
+                <label for="dosage">Dosage:</label>
+                <input type="number" id="dosage">
+                <label for="dispense-interval">Dispense Interval (in hours):</label>
+                <input type="number" id="dispense-interval">
+                <button id="save-parameters-btn">Save Parameters</button>
+            </div>
+        </div>
+
+        <!-- Placeholder for History Page -->
+        <div id="history-page" class="hidden content-placeholder">
+            <h1>Medication History</h1>
+            <p>View the history of dispensed and missed medications.</p>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
