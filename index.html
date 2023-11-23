@@ -77,12 +77,34 @@
                 <input type="number" id="dispense-interval">
                 <button id="save-parameters-btn">Save Parameters</button>
             </div>
+            <!-- Dark Mode / Light Mode Toggle -->
+            <div class="dark-mode-toggle">
+                <h2>Display Mode</h2>
+                <label for="dark-mode-toggle">Dark Mode</label>
+                <input type="checkbox" id="dark-mode-toggle">
+            </div>
         </div>
 
-        <!-- Placeholder for History Page -->
+        <!-- Medication History Page -->
         <div id="history-page" class="hidden content-placeholder">
-            <h1>Medication History</h1>
-            <p>View the history of dispensed and missed medications.</p>
+            <h1>Your Journey to Wellness</h1>
+            <p>Explore your medication history and stay motivated on your path to health.</p>
+            <!-- Medication History Section -->
+            <div class="medication-history">
+                <!-- Display History in Roadmap or Calendar Layout (to be implemented) -->
+            </div>
+            <!-- Last Dispensed Medication Section -->
+            <div class="last-medication">
+                <h2>Last Dispensed Medication</h2>
+                <p id="last-medication-name">Medication Name: Aspirin</p>
+                <p id="last-dispense-time">Dispensed at: 10:30 AM</p>
+            </div>
+            <!-- Next Medication Section -->
+            <div class="next-medication">
+                <h2>Next Medication</h2>
+                <p id="next-medication-name">Medication Name: Ibuprofen</p>
+                <p id="next-medication-time">Scheduled for: 2:00 PM</p>
+            </div>
         </div>
     </main>
 
